@@ -53,6 +53,15 @@ data "aws_iam_policy_document" "iam_policy_codebuild" {
 
     resources = ["*"]
   }
+  statement {
+    effect = "Allow"
+
+    actions = [
+      "eks:Describe*",
+    ]
+
+    resources = ["*"]
+  }
 }
 
 resource "aws_iam_role_policy" "iam_policy_codebuild" {
@@ -88,7 +97,7 @@ resource "aws_codebuild_project" "example" {
 
   logs_config {
     cloudwatch_logs {
-      status  = "ENABLED"
+      status = "ENABLED"
     }
   }
 
