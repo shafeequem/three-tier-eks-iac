@@ -2,6 +2,9 @@
 
 # Prerequisite 
 
+**Install Terraform**
+https://developer.hashicorp.com/terraform/install
+
 **Install Kubectl**
 https://kubernetes.io/docs/tasks/tools/
 

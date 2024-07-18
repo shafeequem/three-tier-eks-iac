@@ -2,7 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.0.0"
 
-  name = "main"
+  name = "lab-main"
   cidr = "10.0.0.0/16"
 
   azs             = var.availability_zones
